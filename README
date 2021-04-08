@@ -1,0 +1,21 @@
+Included in this folder are the following: 
+Compiler_Erros.h
+Proximity_MP3.inio
+README
+
+COMPILER_ERRORS
+The Compiler_Errors.h file is repsonsible for function declarations and must be included as a header in Proximity_MP3.ino as #include "Compiler_Errors.h". See line 39 of Proximity_MP3.ino.
+
+PROXIMITY_MP3
+Proximity_MP3.ino is the main file given by Bare Conductive to use inputs of the board as a proximity sensor. You can see further documentation here: https://www.bareconductive.com/make/proximity/
+
+In addition to the "Compiler_Errors.h" file, You'll need to instal the following libraries from the Arduino Library Manager: MRP121, Wire, SPI, SdFat, FreeStack, SFEMP3Shield.
+
+AUDIO FILES: 
+Audio Track names on the SD Card must be formatted in a specific way. The name corresponds to the button that is being touched on the board. Audio files must be name in the format: TRACK000.mp3, where "000" is the button number. For example, TRACK002.mp3 will trigger the object located on pin E02. 
+
+MIKE -- OBJECT ASSIGNMENT ON TIMELINE MODEL
+Initially I assigned the objects 001 - 011 from right to left as you are looking at the board. The audio tracks on the SD Card should be labeld as noted above.
+
+MIKE -- PROXIMITY TOUCH SETTING
+To change the sensitivity of the 'touch' you can look at line 90 through 116. There are two sections of code that need to change to adjust the setting. The first area (line 90 - 101) is the touch setting. The function call is  MPR121.setTouchThreshold(0,4); "0" represents the button number. (remember the numbering starts at 0. the numbers are listed on the board as E0 - E11). "4" represents the sensitivity level. The lower the value the more sensitive the object. "40" is a good value for contact touch. "2" - "10" is a good range for proximity touch. 
