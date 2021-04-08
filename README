@@ -11,8 +11,22 @@ Proximity_MP3.ino is the main file given by Bare Conductive to use inputs of the
 
 In addition to the "Compiler_Errors.h" file, You'll need to instal the following libraries from the Arduino Library Manager: MRP121, Wire, SPI, SdFat, FreeStack, SFEMP3Shield.
 
-AUDIO FILES: 
+AUDIO FILES 
 Audio Track names on the SD Card must be formatted in a specific way. The name corresponds to the button that is being touched on the board. Audio files must be name in the format: TRACK000.mp3, where "000" is the button number. For example, TRACK002.mp3 will trigger the object located on pin E02. 
+
+TRACK NAMING
+TRACK000.mp3 		Crushed Glass
+TRACK001.mp3 		Plastic Bale
+TRACK002.mp3 		Crushed Cans
+TRACK003.mp3 		Cardboard
+TRACK004.mp3 		Glass Jar
+TRACK005.mp3 		Plastic Bottle
+TRACK006.mp3 		Aluminum Can
+TRACK007.mp3 		Cardboard
+TRACK008.mp3 		New Glass
+TRACK008.mp3 		Plastic Factory
+TRACK010.mp3 		Bauxite
+TRACK011.mp3 		Tree
 
 OBJECT ASSIGNMENT ON TIMELINE MODEL
 Initially I assigned the objects 001 - 011 from right to left as you are looking at the board. The audio tracks on the SD Card should be labeld as noted above.
